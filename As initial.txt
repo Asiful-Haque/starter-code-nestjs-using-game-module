@@ -1,0 +1,25 @@
+module file 
+import { Module } from '@nestjs/common';
+import { WritingController } from './writing.controller';
+import { WritingService } from './writing.service';
+
+@Module({
+  imports: [],
+  controllers: [WritingController],
+  providers: [WritingService],
+})
+export class WritingModule {}
+
+
+
+
+service file 
+export class WritingService {}
+
+
+controller file 
+import { WritingService } from './writing.service';
+
+export class WritingController {
+  constructor(private readonly writingService: WritingService) {}
+}
